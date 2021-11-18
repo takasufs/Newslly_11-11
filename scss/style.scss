@@ -1,1 +1,206 @@
 @charset "utf-8";
+
+$color-text: #A6ADB4;
+$color-heading: #202124;
+$color-gray: #F6F8F9;
+$color-accent: #FA6980;
+
+@mixin inner($w:800px){
+    max-width: $w;
+    width: 90%;
+    margin: 0 auto;
+}
+
+@mixin flex ($fw:wrap){
+    display: flex;
+    flex-wrap: $fw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body{
+    color: $color-text;
+    font-size: 14px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: (24 / 14);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+// BLOCK-------------------
+.morenews{
+    margin: 60px 0 0;
+
+    &__inner{
+        @include inner();
+    }
+
+    &__redtext{
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: $color-accent;
+    }
+
+    &__list{
+        @include flex();
+    }
+
+    &__item{
+        width: 47.5%;
+        margin-bottom: 60px;
+    }
+
+    &__title{
+        color: $color-heading;
+        margin-bottom: 10px;
+    }
+
+    &__text{
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+.title-main{
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #EBEDED;
+    color: $color-heading;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.trending{
+    padding: 60px 0;
+    background-color: $color-gray;
+
+    &__inner{
+        @include inner();
+    }
+
+    &__list{
+        @include flex();
+    }
+
+    &__item{
+        width: 47.5%;
+    }
+}
+
+.News{
+    margin: 60px 0;
+
+    &__inner{
+        @include inner();
+    }
+
+    &__redtext{
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: $color-accent;
+    }
+
+
+    &__title{
+        color: $color-heading;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+//header------------------
+.header{
+    &__inner{
+        @include inner();
+    }
+    &__flex{
+        @include flex();
+    }
+}
+
+//nav---------------------
+.g-nav__list{
+    @include flex();
+
+    .g-nav__item{
+        margin-left: 20px;
+
+    }
+    .g-nav__link{
+        color: $color-text;
+    }
+    .g-nav__black{
+        color: #343638;
+    }
+
+}
+
+
+//card--------------------
+.card{
+    &__body{
+        background-color: #FFFFFF;
+        padding: 27px 0 35px;
+    }
+
+    &__title{
+        color: $color-heading;
+        margin-left: 35px;
+    }
+
+    &__text{
+        margin: 10px 35px 0;
+    }
+}
+
+//btn---------------------
+.btn{
+    display: block;
+    width: 160px;
+    margin-top: 30px;
+    margin-right: 35px;
+    margin-left: auto;
+    padding: 13px 0;
+    background-color: $color-accent;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.025em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.News__btn{
+    margin-left: 0;
+}
+
+//footer------------------
+.footer{
+    background-color: #A6ADB4;
+
+    &__inner{
+        @include inner();
+    }
+    &__copyright{
+        display: block;
+        padding: 100px 0 42px;
+        color: #CBD0D3;
+    }
+}
